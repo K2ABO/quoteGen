@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Quotes Generator</title>
+</head>
+<style>
+    .card {
+        transform: translate(0%, 100%)!important;
+        box-shadow: 12px 10px 40px rgb(228, 213, 213)!important;
+    }
+    
+    body {
+        background: linear-gradient(to left, rgb(235, 230, 206), rgb(179, 41, 41));
+    }
+    
+    .card-text {
+        text-shadow: 20px 10px 40px rgb(255, 255, 255)!important;
+        
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card text-light text-center">
+                    <div class="card-header text-center bg-danger ">
+                        <h3>Quotes Generator</h3>
+                    </div>
+                    <div class="card-body bg-secondary">
+                        <h5 class="card-title ">My Quotes</h5>
+                        <p class="card-text  ">I hope you will find something useful.</p>
+                        <button id="button" type="button" class="btn btn-success">Generate</button>
+                    </div>
+                    <div class="card-footer bg-warning  text-muted">
+                          K2A@BO
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const display = document.querySelector('.card-text');
+        const button = document.getElementById('button');
+        const quotes = ['“Le chien est le meilleur ami de son maître”',
+            '“ Un enfant est courageux tant que son ignorance le domine”',
+            '“Les fruits du labeur seront toujours benefiques”',
+            '“ Le chemin succès ne sera jamais une droite requetiligne”',
+            '“Un tigre ne proclame pas sa tigritude, il bondit sur sa proie et la dévore”',
+            '” Au sahel, un temps pluvieux est synomyme de beau temps”',
+            ' “Un Homme prévenu en vaut deux”',
+            '” La patrie our la mort nous vaincrons”',
+            '”Le mariage est le socle de la société”',
+            '”Il est recommandé de regarder à gauche et a droite avant de traverser”',
+            '”Afrique, mon Afrique ton reveil est attendu par tes fils”',
+            '”Un homme qui frappe sa femme sera a son tour frappé”',
+            '”La fin justifie souvent les moyens”'
+        ];
+        button.addEventListener("click", function generate() {
+            var randomquote = quotes[Math.floor(Math.random() * quotes.length)];
+            display.innerHTML = randomquote;
+        });
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
